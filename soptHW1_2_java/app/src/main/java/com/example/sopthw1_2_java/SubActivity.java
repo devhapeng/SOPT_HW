@@ -15,7 +15,7 @@ public class SubActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.sign_activity);
 
         Button button;
         button = (Button) findViewById(R.id.button) ;
