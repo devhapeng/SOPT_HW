@@ -3,7 +3,7 @@ package com.example.sopthw1_2
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.content.Intent
-import android.support.v7.app.AppCompatActivity
+import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -12,21 +12,17 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-
         textView3.setOnClickListener {
 
+            val nextIntent = Intent(this@MainActivity, SignActivity::class.java)
 
-            val nextIntent = Intent(this, SignActivity::class.java)
-            if(intent.hasExtra("email")) {
-                TextView_get.text = intent.getStringExtra("email")
+            editText_email.setText(nextIntent.getStringExtra("email"))
+            editText_pw.setText(nextIntent.getStringExtra("password"))
 
-                    if(intent.hasExtra("password")) {
-                        TextView_get.text = intent.getStringExtra("password")
-                    }
-            } else {
-                Toast.makeText(this, "Error!", Toast.LENGTH_SHORT).show()
-            }
-            startActivity(intent)
+
+            startActivity(nextIntent)
+
+
         }
     }
 }

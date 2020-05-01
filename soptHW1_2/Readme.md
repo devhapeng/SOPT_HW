@@ -36,3 +36,7 @@
 
 -putExtra("name", value)의 형식으로 데이터를 전달할 수 있다.
 예) nextIntent.putExtra("email",inputEmail)
+
+#질문
+
+-끝내 코틀린으로 데이터를 받아오는 것을 해결하지 못하였다.
